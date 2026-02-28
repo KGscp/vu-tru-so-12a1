@@ -950,7 +950,14 @@ export default function App() {
     </div>
   );
 
-  const ProfileView = () => (
+  const ProfileView = () => { // Thêm dấu ngoặc nhọn ở đây
+  
+  // Dán hàm xử lý copy vào đây
+  const handleCopyEmail = (email) => {
+    navigator.clipboard.writeText(email);
+    alert("🚀 Đã sao chép địa chỉ Email: " + email);
+  };
+    return (
     <div className="container mx-auto px-4 md:px-20 py-12 flex flex-col lg:flex-row items-center justify-center gap-12 min-h-[calc(100vh-80px)]">
       <div className="lg:col-span-5 flex justify-center relative">
         <div className="relative w-full aspect-square max-w-[400px]">
@@ -1047,15 +1054,19 @@ export default function App() {
                     { Icon: MessageSquare, href: "https://discord.com/users/520534616738758656" },
                     { Icon: Mail, href: "irienothing@gmail.com" }
                   ].map((social, i) => (
-                    <a 
+                    <button 
                       key={i} 
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      onClick={() => {
+                        if (social.Icon === Mail) {
+                          handleCopyEmail(social.href);
+                        } else {
+                          window.open(social.href, "_blank");
+                        }
+                      }}
                       className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 hover:bg-primary hover:text-background-dark transition-all border border-primary/20 text-primary"
                     >
                       <social.Icon className="size-5" />
-                    </a>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -1065,6 +1076,7 @@ export default function App() {
       </div>
     </div>
   );
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
