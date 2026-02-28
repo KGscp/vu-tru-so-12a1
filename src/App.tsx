@@ -422,7 +422,7 @@ export default function App() {
                whileHover={{ rotate: 180 }}
                transition={{ duration: 0.4 }}
               >
-                <RotateCw size={20} /> 
+              <RotateCw size={20} /> 
               </motion.div>
             <span className="font-medium">XEM MÔ HÌNH 3D</span>
          </a>
@@ -999,7 +999,7 @@ export default function App() {
                 <span className="absolute bottom-1 right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-background-dark" />
               </div>
               <div>
-                <h1 className="text-4xl font-bold tracking-tight mb-1 text-gradient">Phi hành gia Công nghệ - Lê Phúc Tiến</h1>
+                <h1 className="text-4xl font-bold tracking-tight mb-1 text-gradient">Lê Phúc Tiến</h1>
                 <p className="text-primary font-medium text-lg uppercase tracking-widest">Class 12A1 • Digital Explorer</p>
               </div>
             </div>
@@ -1042,10 +1042,10 @@ export default function App() {
               <div className="pt-6 border-t border-white/10 flex justify-center">
                 <div className="flex gap-4">
                   {[
-                    { Icon: Github, href: "https://github.com/lephuctien" },
-                    { Icon: Facebook, href: "https://facebook.com/lephuctien" },
-                    { Icon: MessageSquare, href: "https://discord.gg/yourserver" },
-                    { Icon: Mail, href: "mailto:le477718@gmail.com" }
+                    { Icon: Github, href: "https://github.com/KGscp" },
+                    { Icon: Facebook, href: "https://www.facebook.com/tien.le.446771" },
+                    { Icon: MessageSquare, href: "https://discord.com/users/520534616738758656" },
+                    { Icon: Mail, href: "irienothing@gmail.com" }
                   ].map((social, i) => (
                     <a 
                       key={i} 
@@ -1163,7 +1163,7 @@ export default function App() {
           </div>
         </div>
         <div className="text-[10px] text-slate-500">
-          © 2024 Author Space Exploration Portfolio
+          Copyright © 2026 by KG. Space Exploration Portfolio.
         </div>
       </footer>
     </div>
