@@ -986,7 +986,7 @@ export default function App() {
                 <div className="size-24 rounded-full border-2 border-primary p-1">
                   <div className="size-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/src/file_000000001ab061f78d357f6eecda1a46.png" 
+                      src="/avatar.png"
                       alt="Author Avatar" 
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
