@@ -669,13 +669,6 @@ export default function App() {
         </button>
       </div>
 
-      <div className="absolute bottom-10 right-8 flex flex-col gap-4">
-        {[Search, Maximize2, Share2].map((Icon, i) => (
-          <button key={i} className="size-10 flex items-center justify-center glass-card rounded-full hover:bg-primary hover:text-background-dark transition-all">
-            <Icon className="size-4" />
-          </button>
-        ))}
-      </div>
       </div>
     );
   };
