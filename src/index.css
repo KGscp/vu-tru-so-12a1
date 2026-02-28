@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --color-primary: #13c8ec;
+  --color-background-dark: #101f22;
+}
+
+@layer base {
+  html, body {
+    @apply bg-background-dark text-slate-100 font-sans;
+    min-height: 100vh;
+    cursor: crosshair;
+  }
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(19, 200, 236, 0.4);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/60;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(19, 200, 236, 0.5), 0 0 40px rgba(19, 200, 236, 0.2);
+  }
+
+  .star-field {
+    background: radial-gradient(circle at center, #1a2a2d 0%, #101f22 100%);
+    @apply fixed inset-0 -z-10;
+  }
+
+  .grid-lines {
+    background-image: linear-gradient(rgba(19, 200, 236, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(19, 200, 236, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+.nav-active {
+  box-shadow: 0 0 15px #00f2ff;
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 242, 255, 0.5) !important;
+  background-color: rgba(0, 242, 255, 0.1) !important;
+}
+
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 60s linear infinite;
+}
+
