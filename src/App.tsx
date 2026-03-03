@@ -1175,7 +1175,7 @@ export default function App() {
           </div>
         </div>
         <div className="text-[10px] text-slate-500">
-          Copyright © 2026 by KG. Space Exploration Portfolio.
+          Copyright © 2026 by Le Phuc Tien. Space Exploration Portfolio.
         </div>
       </footer>
     </div>
